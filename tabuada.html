@@ -1,0 +1,19 @@
+<meta charset="UTF8">
+
+<script>
+	function mostra(frase){
+		document.write(frase+"<br>");
+	}
+var multiplicador = 1;
+var numEscolhido = parseInt(prompt("Informe o número que queira ver a tabuada"));
+while(multiplicador<=10){
+	mostra(numEscolhido*multiplicador);
+	multiplicador=multiplicador+1;
+}
+//ou utilizar o for
+
+for (var mult=1;mult<=10;mult++){
+    mostra(numEscolhido*mult);
+}
+
+</script>

@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+<h1> Jogo de adivinhar </h1>
+<script>
+    function mostra(frase){
+        document.write(frase+"<br>");
+    }
+// pega o número sorteado com o math.random de 0 a 10
+var numeroSorteado = Math.round(Math.random()*10);
+// pega o número que a pessoa chutou através do prompt
+//var chute = parseInt (prompt("Informe o número"));
+
+/*if (chute==numeroSorteado) {
+    mostra("Você acertou, parabéns!");
+} else {
+    mostra("Você errou, o número sorteado é: " +numeroSorteado);
+}*/
+
+//ou usando laços de repetições como melhoria
+
+var numTentativas=1;
+while(numTentativas<=3){
+    var chute = parseInt(prompt("Informe o número"));
+    if(chute==numeroSorteado) {
+        mostra("Você acertou, o número sorteado é: "+numeroSorteado);
+        break;
+    } else {
+        mostra("Você errou, você tem "+(3-numTentativas)+" tentativas");
+    }
+    numTentativas++;
+}
+</script>

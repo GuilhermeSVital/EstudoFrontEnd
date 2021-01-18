@@ -1,0 +1,47 @@
+<meta charset="UTF-8">
+<h1>You can, just want</h1>
+<script>
+    /*fun pular linha*/
+    var ano=2021;
+    function pulaLinha(){
+        //alert ("oi")
+        document.write("<br><hr><big><br><br>");
+    }
+    
+    //Função calcula IMC
+    function calculaImc(peso,altura){
+        return peso/(altura*altura);
+        //document.write("O IMC de Guilherme é "+imc);
+    }
+
+    function mostra(resultado){
+        document.write(resultado+"<br>");
+    }
+
+    /*document.write("<br><br>Teste para escrever no documento (HTML)");
+    pulaLinha();
+    document.write("<br>Minha idade é: "+(18+13));
+    pulaLinha();
+    document.write("<br>Eu Acertei " + (15/50)*100 +" %");
+    pulaLinha()
+    document.write("<br>Guilherme nasceu em "+(ano - 1989)+"<hr>");
+    */
+    //parseInt() poderá ser usado para conversão para inteiro
+    var vitoria= parseInt(prompt("Informe o número de vitórias do seu time"));
+    var empates = parseInt(prompt("Informe o número de empates do seu time"));
+    var pontosAnoAnterior = parseInt(prompt("Informe a quantidade de pontos do ano passado"));
+    var pontosAnoAtual = vitoria*3+empates;
+
+    /*if(pontosAnoAtual>pontosAnoAnterior){
+        mostra("<br> Seu time somou mais pontos no ano atual ");
+    }
+    if (pontosAnoAtual<pontosAnoAnterior){
+        mostra("<br> Seu time somou menos pontos no ano atual");
+    }
+    if (pontosAnoAtual==pontosAnoAnterior){
+        mostra("<br> A quantidade de pontos são iguais nos dois anos");
+    }*/
+
+
+
+</script>
