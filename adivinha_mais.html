@@ -1,0 +1,43 @@
+<meta charset="UTF8">
+<input/>
+<button>Comparar com o segrego</button>
+
+<script>
+    //array de dados
+    var segredos = [5,3,8,56];
+    //pegando o valor digitado no input que está no HTML
+    var input = document.querySelector("input");
+    input.focus();
+    //Funcao comparativa segredo/valor input
+    /*function verifica(){
+        if (input.value == segredo){
+            alert("Você Acertou!!!");
+        } else {
+            alert("Você Errou :(");
+        }
+        input.value="";
+        input.focus();
+    }
+    */
+   //ou
+   function verifica(){
+       var achou = false;
+       for (var posicao = 0; posicao < segredos.length; posicao++){
+            if (input.value==segredos[posicao]){
+                alert("Você acertou");
+                achou=true;
+                break;
+            }
+       }
+       if (achou==false){
+           alert("Você errou");
+       }
+       input.value="";
+       input.focus();
+   }
+    //Usando o querySelector para pegar clique do botão
+    var button = document.querySelector("button");
+    //Chamando função verifica no onclick do botão
+    button.onclick = verifica;
+
+</script>
