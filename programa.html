@@ -1,0 +1,31 @@
+<meta charset="UTF8">
+<h1>Tela para desenho</h1>
+<!--definindo o canvas (tela de pintura) --> 
+<canvas width="600" height="400"></canvas>
+
+<script>
+    //pegando o canvas criado no html e adicionando à variável tela
+    var tela = document.querySelector("canvas");
+    // criando "pincel para desenhar meu canvas em 2d"
+    var pincel = tela.getContext("2d");
+    //mudando cor do preenchimento do canvas
+    pincel.fillStyle = '#FFAA50';
+    //definindo onde o pincel irá desenhar o canvas
+    pincel.fillRect(0,0,600,400);
+    
+    //desenhando um triangulo amarelo
+    pincel.fillStyle = 'yellow';
+    pincel.beginPath();//funcao beginPath(); informa que vai percorrer um novo caminho
+    pincel.moveTo(300, 200); // funcao para mover o pincel pra algum lugar da tela
+    pincel.lineTo(200, 400); // funcao para desenhar uma linha de um ponto a outro
+    pincel.lineTo(400, 400);
+    pincel.fill();
+
+    //desenhando um círculo
+    pincel.fillStyle = 'back';
+    pincel.beginPath();// iniciando novo caminho
+    pincel.moveTo(300,200);
+    pincel.arc(300,200,50,0,2*3.14);//primeiro a posição do eixo x, depois y, depois o raio, depois angulo inicial e final
+    pincel.fill();
+
+</script>

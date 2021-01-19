@@ -1,0 +1,44 @@
+<meta charset="UTF8">
+<h1>Monstro do lago ness</h1>
+<canvas width="600" height="400"></canvas>
+<script>
+    //desenhando canvas
+    var tela = document.querySelector("canvas");
+    var pincel = tela.getContext("2d");
+    pincel.fillStyle = 'darkblue';
+    pincel.fillRect(0,0,600,400);
+
+    //desenhando olhos
+    pincel.fillStyle = 'black';
+    pincel.beginPath();
+    pincel.moveTo(200,150);
+    pincel.arc(200,150,50,0,2*3.14);
+    pincel.fill();
+
+    pincel.fillStyle = 'black';
+    pincel.beginPath();
+    pincel.moveTo(400,150);
+    pincel.arc(400,150,50,0,2*3.14);
+    pincel.fill();
+
+    //desenhando nariz
+    pincel.fillStyle = 'black';
+    pincel.beginPath();
+    pincel.moveTo(250,200);
+    pincel.fillRect(250,220,40,40);
+
+    pincel.fillStyle = 'black';
+    pincel.beginPath();
+    pincel.moveTo(250,200);
+    pincel.fillRect(300,220,40,40);
+
+    //desenhando a boca
+
+    pincel.fillStyle = 'red';
+    pincel.beginPath();
+    pincel.moveTo(200,300);
+    pincel.arc(295,300,100,100,2*1.55);
+    pincel.fill();
+
+
+</script>
