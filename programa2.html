@@ -1,0 +1,32 @@
+<meta charset="UTF8">
+<h1>Impressão.</h1>
+<canvas width="600" height="400"></canvas>
+<script>
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    pincel.fillStyle = 'green';
+    pincel.fillRect(0,0,50,50);
+    pincel.fillStroke = 'black';
+    pincel.strokeRect(0,0,50,50);
+</script>
+<!--ou -->
+<script>
+    //essa ja é uma função para desenhar um quadrado a partir de um parâmetro, nesse caso alterando o tamanho do mesmo
+    function desenhaQuadrado (x,cor){
+        var tela = document.querySelector('canvas');
+        var pincel = tela.getContext('2d');
+
+        pincel.fillStyle = cor;
+        pincel.fillRect(x,0,50,50);
+        //informando cor do preenchimento da linha
+        pincel.fillStroke = 'black';
+        //informando dados eixo x e y, tamanho da linha
+        pincel.strokeRect(x,0,50,50);
+    }
+    //chamando funcao desenhaQuadrado
+    desenhaQuadrado(10,'black');
+    desenhaQuadrado(50,'red');
+    desenhaQuadrado(35,'grey');
+
+</script>
