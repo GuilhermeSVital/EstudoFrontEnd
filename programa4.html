@@ -1,0 +1,38 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+    //Criando tela e pincel
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    //Desenhando tela
+    pincel.fillStyle = "black";
+    pincel.fillRect(0,0,600,400);
+
+    //Funcao para desenhar cada círculo chamado
+    function desenhaCirculo(x,y,raio){
+        pincel.fillStyle="white";
+        pincel.beginPath();
+        pincel.arc(x,y,raio,0,2*Math.PI);
+        pincel.fill();
+    }
+
+    //limpando círculo anterior
+    function limpaTela(){
+        //pincel.clearRect(0,0,600,400);
+        pincel.fillStyle='black';
+        pincel.fillRect(0,0,600,400);
+    }
+    var x=10;
+    //atualizando a tela com o desenho da bolinha e limpando a anterior
+    function atualizaTela(){
+        limpaTela();
+        desenhaCirculo(x,20,10);
+        x++;
+    }
+    //
+    setInterval(atualizaTela,10);
+    
+
+
+</script>
